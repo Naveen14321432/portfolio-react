@@ -1,9 +1,9 @@
 //import React from 'react'
-import './Services.css';
+import './Experience.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import Services_Data from '../../assets/services_data';
 
-const Services = () => {
+const Experience = () => {
   return (
     <div className='services'>
         <div className="services-title">
@@ -30,4 +30,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Experience
