@@ -42,18 +42,25 @@
     cursor: pointer;
 }
 
-.hero-resume{
+.hero-resume a{
     padding: 25px 75px;
     border-radius: 50px;
     border: 2px solid #FFF;
     cursor: pointer;
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Ensures it behaves like a button */
+    text-align: center; /* Centers text */
+    background: transparent; /* Optional: You can set a background color if needed */
+    color: #FFF; /* Set the text color */
+    font-size: 24px; /* Matches the font size of your buttons */
+    font-weight: 500; /* Matches the font weight of your buttons */
 }
 
 .hero-connect:hover{
     border: 2px solid #FFF;
 }
 
-.hero-resume:hover{
+.hero-resume a:hover{
     border-color: #B415FF;
 }
 
