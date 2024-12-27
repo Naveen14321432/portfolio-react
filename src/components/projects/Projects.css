@@ -41,7 +41,7 @@
 
 .mywork-container img:hover{
     transform: scale(1.10);
-    border: 4px solid #ff00ff;
+    border: 4px solid #ac5a12;
     border-radius: 10px;
     transition: 0.3s;
 }
@@ -76,7 +76,7 @@
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 10px; /* Adds spacing below the title */
-    background: linear-gradient(270deg, #a133ff, #ff6b6b);
+    background: linear-gradient(267deg, #b00606 0.36%, #ac5a12 102.06%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

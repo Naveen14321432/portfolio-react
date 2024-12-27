@@ -55,7 +55,7 @@
 .services-format h2 {
     font-size: 40px;
     font-weight: 900;
-    background: linear-gradient(270deg, #a133ff, #ff6b6b);
+    background: linear-gradient(267deg, #b00606 0.36%, #ac5a12 102.06%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -67,7 +67,7 @@
 }
 
 .services-format:hover {
-    border: 2px solid #ff00ff;
+    border: 2px solid #ac5a12;
     background: linear-gradient(135deg, #2c2c2c, #3f0028);
     transform: scale(1.05);
 }

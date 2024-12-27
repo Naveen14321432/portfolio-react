@@ -47,7 +47,7 @@
 
 .certificates-container img:hover{
     transform: scale(1.10);
-    border: 4px solid #ff00ff;
+    border: 4px solid #ac5a12;
     border-radius: 10px;
     transition: 0.3s;
 }
