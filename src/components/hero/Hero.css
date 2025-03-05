@@ -17,10 +17,12 @@
     font-size: 70px;
     font-weight: 600;
     width: 70%;
+    max-width: 70%;
 }
 
 .hero p{
     width: 50%;
+    max-width: 50%;
     text-align: center;
     font-size: 24px;
     line-height: 40px;
@@ -54,7 +56,7 @@
     background: transparent; /* Optional: You can set a background color if needed */
     color: #FFF; /* Set the text color */
     font-size: 24px; /* Matches the font size of your buttons */
-    font-weight: 500; /* Matches the font weight of your buttons */
+    font-weight: 500; 
 }
 
 .hero-connect:hover{
@@ -92,12 +94,26 @@
     }
 
     .hero-connect{
-        padding: 20px 30px;
+        padding: 20px 50px;
         border-radius: 40px;
     }
 
     .hero-resume{
-        padding: 20px 50px;
+        padding: 20px 30px;
         border-radius: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero p {
+        font-size: 16px;
+        line-height: 28px;
+        width: 90%;
+    }
+    .hero img {
+        width: 200px;
     }
 }
