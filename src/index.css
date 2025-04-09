@@ -5,8 +5,13 @@
 
 body {
   color: white;
-  height: 100vh;
+  min-height: 100vh;
   background: url('/background.svg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Outfit', sans-serif;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+

@@ -1,12 +1,30 @@
 //import React from 'react'
 import './Navbar.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import underline from '../../assets/nav_underline.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import menu_open from '../../assets/menu_open.svg';
 import menu_close from '../../assets/menu_close.svg';
 import { useRef } from 'react';
 const Navbar = () => {
+
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      //console.log("Scroll position:", window.scrollY);
+      setIsTop(window.scrollY < 50);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+  
 
   const [menu, setMenu] = useState("home")
   const menuRef = useRef();
@@ -22,7 +40,9 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <h2>Naveen Kammili</h2>
-      <img src={menu_open} onClick={openMenu} alt='' className='nav-mob-open'/>
+      {isTop && (
+        <img src={menu_open} onClick={openMenu} alt='' className={`nav-mob-open ${!isTop ? 'hidden' : ''}`}/>
+      )}
       <ul ref={menuRef} className='nav-menu'>
         <img src={menu_close} onClick={closeMenu} alt='' className='nav-mob-close' />
         <li><AnchorLink className='anchor-link' href='#home'><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>{menu==="home"?<img src={underline} alt=''/>:<></>}</li>
