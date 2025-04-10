@@ -52,6 +52,7 @@
     display: none;
 }
 
+
 @media(max-width: 768px){
     .hidden {
         display: none;
@@ -98,3 +99,26 @@
         gap: 20px;
     }
 }
+
+@media (max-width: 1024px) {
+    .navbar {
+      margin: 20px 40px; /* reduce side margin */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .nav-connect {
+      padding: 12px 24px;
+      font-size: 16px;
+      max-width: 100%;
+      text-align: center;
+      border-radius: 30px;
+      margin-top: 10px;
+    }
+  
+    .nav-menu {
+      gap: 20px;
+      font-size: 18px;
+    }
+  }
