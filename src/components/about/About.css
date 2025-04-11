@@ -124,7 +124,7 @@
   transform: scale(1.12);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about {
     margin: 50px 30px;
     gap: 50px;
