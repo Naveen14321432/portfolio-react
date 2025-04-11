@@ -73,38 +73,63 @@
 }
 
 @media (max-width: 768px) {
-    .services{
-        align-items: start;
-        gap: 70px;
-        margin: 20px 70px;
+    .services {
+        align-items: center;
+        gap: 50px;
+        margin: 50px auto;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .services-title h1{
+    .services-title h1 {
+        font-size: 40px;
         padding: 0;
-        font-size: 50px;
     }
 
-    .services-title img{
-        width: 130px;
-        margin-right: -20px;
-    }
-
-    .services-format{
-        gap: 20px;
-        padding: 32px;
-    }
-
-    .services-format h2{
-        font-size: 28px;
-    }
-
-    .services-format p{
-        font-size: 18px;
-        line-height: 32px;
-        max-width: 300px;
+    .services-title img {
+        width: 100px;
+        right: -10px;
     }
 
     .services-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .services-format {
+        width: 90%;
+        max-width: 600px;
+        padding: 20px;
+        gap: 16px;
+        box-sizing: border-box;
+        min-height: 320px;
+        max-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 16px;
+        border: 2px solid white;
+        /* overflow-wrap: break-word; */
+        /* word-wrap: break-word; */
+    }
+
+    .services-format h2,
+    .services-format h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .services-format p {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        word-break: break-word;
     }
 }
+
