@@ -2,6 +2,9 @@ import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './Footer.css';
 import footer_logo from '../../assets/logo.svg';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Footer = () => {
   // 1) Create a ref to grab the email input value
@@ -17,14 +20,24 @@ const Footer = () => {
     const subscriberEmail = emailRef.current.value.trim();
 
     if (!subscriberEmail) {
-      alert('Please enter a valid email address.');
-      return;
+      toast.error('Please enter a valid email address.', {
+      position: "top-right",
+      autoClose: 5000,
+      theme: "colored",
+      progressStyle: { background: "#d32f2f !important;" }
+    });
+    return;
     }
 
     // OPTIONAL: Basic email format check
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(subscriberEmail)) {
-      alert('Please enter a valid email format (e.g. name@example.com).');
+      toast.error('Please enter a valid email format (e.g. name@example.com).', {
+      position: "top-right",
+      autoClose: 5000,
+      theme: "colored",
+      progressStyle: { background: "#d32f2f !important;" }
+    });
       return;
     }
 
@@ -40,12 +53,21 @@ const Footer = () => {
     emailjs
       .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(() => {
-        alert('🎉 Thank you for subscribing. Please keep an eye on your inbox for upcoming updates.');
+        toast.success('Thank you for subscribing!!', {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "colored"
+      });
         emailRef.current.value = '';
       })
       .catch((error) => {
         console.error('EmailJS error:', error);
-        alert('Oops! Something went wrong. Please try again in a moment.');
+              toast.error('Oops! Something went wrong. Please try again in a moment.', {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "colored",
+        progressStyle: { background: "#d32f2f !important;" }
+      });
       });
   };
 

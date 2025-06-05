@@ -118,6 +118,17 @@
     transition: 0.3s;
 }
 
+.Toastify__toast--success {
+  background-color: #2e7d32 !important; /* dark green */
+  color: white !important;
+}
+
+.Toastify__progress-bar--success {
+  background: white !important;
+}
+
+
+
 @media(max-width:1024px){
     .contact{
         gap: 50px;
@@ -181,6 +192,42 @@
         font-size: 20px;
         padding: 15px 40px;
     }
+
+    .Toastify__toast-container--top-right {
+  top: 30px !important;  /* Increase this value to move it further down */
+  right: 12px !important; /* Keep right margin consistent */
+}
+
+      .Toastify__toast {
+    width: 80% !important;      /* smaller width */
+    max-width: 260px !important; /* limit max width */
+    font-size: 12px !important;  /* smaller font */
+    padding: 8px 12px !important; /* less padding */
+    border-radius: 8px !important;
+  }
+
+  /* Optional: smaller progress bar height */
+  .Toastify__progress-bar {
+    height: 3px !important;
+  }
+
+    .Toastify__toast--success {
+  background-color: #2e7d32 !important; /* dark green */
+  color: white !important;
+}
+
+.Toastify__progress-bar--success {
+  background: white !important;
+}
+
+.Toastify__toast--error {
+  background-color: #d32f2f !important; /* red */
+  color: white !important;
+}
+
+.Toastify__progress-bar--error {
+  background: white !important; /* white progress bar */
+}
 
 }
 
